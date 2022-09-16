@@ -1,0 +1,432 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+
+.btn{width: 24px;
+height: 24px;
+cursor: pointer;
+background: none;
+border: none;}
+
+/* 搜尋列設定 */
+header{height: 57px;
+width: 100%;
+background: rgba(40,40,40,0.95);
+display: flex;
+position: fixed;
+top: 0;
+z-index:100}
+
+.header-left{
+    width: 152px;
+    height: 100%;
+    display: flex;    
+    align-items: center;
+    margin-left: 12px;
+}
+
+.menu-btn{margin: 12px;}
+
+.logo{margin: 12px;
+display: flex;
+align-items: center;}
+.logo{border: none;
+    background: none;}
+
+.logo>img{width: 80px;
+}
+
+.header-middle{flex: 1;
+height: 100%;
+display: flex;
+align-items: center;
+}
+.header-middle>input{margin-left: 80px;
+height: 32px;
+border: 1px solid #2f2f2f;
+background: #121212;
+text-indent: 11px;
+font-size: 14px;
+color: #898989;
+font-weight: 500;
+flex: 1;
+margin-right: 1px;
+outline: none;
+}
+.header-middle>input:focus{color: white;
+border: 1px solid #45aaff;}
+
+.search-btn{
+    background: #393939;
+    border: 1px solid #2f2f2f;
+    width: 66px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 80px;
+}
+
+
+.header-right{width: 255px;
+height: 100%;
+display: flex;
+align-items: center;
+margin-right: 10px;
+}
+
+.header-right>button{margin: 10px;}
+
+.signin{width: 120px;
+height: 40px;
+border: 2px solid #45aaff;
+border-radius: 3px;
+background: none;
+display: flex;
+align-items: center;}
+
+.signin>img{width: 22px;
+height: 22px;
+border-radius: 11px;
+margin:11px;
+}
+.signin>span{color:#45aaff ;
+font-size: 12px;
+font-weight: 700;}
+
+
+/* 主要頁面 */
+section{background: #1f1f1f;
+width: 100%;
+height: 100%;
+display: grid;
+grid-template: auto auto 1fr / 2fr 1fr;
+grid-template-areas: 'a b'
+                     'c b'
+                     'd b';
+padding: 80px 20px 20px 20px;}
+
+@media screen and (max-width:1024px){
+section{display: flex;
+flex-direction: column;
+padding: 80px 10px 10px 10px;
+}
+    
+}
+
+.video{
+position: relative;
+padding-bottom: 56.25%; /* 16:9 */
+margin:0 20px;
+height: 0;
+overflow: hidden;
+grid-area: a;
+}
+
+.video>iframe{position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 影片標題欄 */
+.video-info{grid-area: c;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.videotitle{
+    padding-top: 20px;
+}
+.videotitle>h1{font-size: 18px;
+font-weight: 400;
+color: white;}
+
+.views-date{width: 100%;
+height: 42px;
+border-bottom: 1px solid #323232;
+display: flex;
+align-items: center;}
+
+.vd1{color:#bdbdbd;
+font-size: 14px;}
+.vd2{flex: 1;}
+.vd3{height: 100%;
+display: flex;
+align-items: center;
+padding-left:10px;
+border-bottom: 2px solid #bdbdbd;}
+.vd4{height: 100%;
+display: flex;
+align-items: center;
+padding:0 10px;
+border-bottom: 2px solid #bdbdbd;}
+.vd5{display: flex;
+align-items: center;
+padding-left:10px;}
+.vd6{display: flex;
+align-items: center;
+padding:0 10px;}
+.views-date button>img{width: 20px;
+height: 20px;}
+.views-date span{color: #bdbdbd;font-size: 13px;padding-left: 5px;}
+.vd1>span{padding-left: 0;}
+
+/* 上傳者/訂閱者/影片資訊 */
+.subscribers{width: 100%;
+display: flex;
+align-items: center;
+margin-top:15px ;}
+.subscribers>img{width: 48px;
+height: 48px;
+border-radius: 24px;
+margin-right: 16px;}
+.username{flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;}
+.username>p:nth-child(1){color:white;
+font-size: 14px;
+font-weight: 700;
+padding:1px 0;
+}
+.username>p:nth-child(2){color:#bdbdbd;
+font-size: 12px;
+padding:1px 0;
+}
+.subscribe-btn{
+background: #FF0000;
+border: none;
+color: white;
+font-size: 14px;
+width: 72px;
+height: 40px;
+border-radius: 2px;
+}
+
+.aboutvideo{margin-top: 15px;
+padding-left: 64px;
+display: flex;
+flex-direction: column;
+}
+.aboutv1{padding-bottom: 30px;}
+
+.aboutv1>p{color: white;
+font-size: 14px;
+line-height: 20px;}
+.aboutv1>a{color: #45a8fc;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;}
+
+.aboutv2{display: grid;
+    grid-column-gap:16px ;
+    grid-template-columns: auto auto;}
+.aboutgame1,.aboutgame2{height: 100px;
+background: #0f0f0f;
+display: flex;
+align-items: center;
+text-decoration: none;}
+.aboutgame1>img{height: 100%;
+margin-right: 17px;}
+.aboutgame2>img{height: 56px;
+border-radius: 28px;
+margin: 0 17px;}
+
+.aboutgame1-info,.aboutgame2-info{display: flex;
+flex-direction: column;}
+.aboutgame1-info>h2,.aboutgame2-info>h2{color: white;
+font-size: 16px;
+font-weight: 400;
+}
+.aboutgame1-info>span{color: #898989;
+font-size: 12px;
+font-weight: 400;
+margin-top: 4px ;}
+
+.ginfo1,.ginfo2{display: flex;
+align-items: center;
+margin-top: 4px;}
+
+.ginfo1 .font14,.ginfo2 .font14{color: #898989;
+    font-size: 14px;
+align-self:center ;}
+
+.aboutgame1-flexbox,.aboutgame2-flexbox{flex: 1;}
+
+.subbox{width: 100%;
+border-bottom: 1px solid #323232;
+padding-bottom: 16px;
+margin-bottom: 24px;}
+
+
+/* 留言區 */
+.comment{grid-area: d;
+margin: 0 20px;
+display: flex;
+flex-direction: column;}
+
+.comment1{display: flex;
+    margin-bottom: 24px;
+}
+.comment1>span{font-size: 16px;
+color: white;
+padding-right:30px ;}
+
+.comment1>div{display: flex;
+align-items: center;}
+
+.comment1>div>span{font-size: 14px;
+    color: white;
+    padding-left:8px }
+
+.commenttext{display: flex;}
+.commenttext>div{display: flex;}
+.circleimg{width: 40px;
+height: 40px;
+border-radius: 20px;
+margin-right: 16px}
+.commenttext>input{
+height: 25px;
+font-size: 14px;
+padding-bottom: 5px;
+border: none;
+outline: none;
+background: none;
+border-bottom: 1px solid #aaaaaa;
+flex: 1;
+margin-right: 20px ;
+}
+.commenttext>input:focus{color: white;
+border-bottom: 1px solid white;}
+
+/* -回應- */
+.othercommt
+{display: flex;
+flex-direction: column;
+margin-top: 30px;}
+
+.otherc1{display: flex;
+}
+
+.reply-username span:nth-child(1){color: white;
+font-size: 13px;font-weight: 400;}
+.reply-username span:nth-child(2){color: #aaaaaa;
+font-size: 13px; padding-left: 5px;}
+.reply-message{color: white;
+font-size: 14px;padding: 4px 0;
+line-height: 18px;}
+.reply-like{display: flex;
+align-items: center;
+margin-top: 10px;}
+.reply-like>div{display: flex;
+    align-items: center;
+margin-right: 5px;}
+.reply-btn{background: none;
+border: none;}
+.reply-btn>img{width: 16px;height: 16px;margin-right: 10px;}
+.reply-like span{font-size: 12px;margin-right: 15px;color: #aaaaaa;}
+
+.otherc2{display: flex;align-items: center;
+margin-top: 10px;}
+.triangle{border: 5px solid transparent;
+border-top:5px solid #3EA6FF;}
+.otherc2 span:nth-child(2){color: #3EA6FF;font-size: 14px;
+padding-left: 10px;}
+
+
+/* 更多影片 */
+
+.aside{display: flex;
+flex-direction: column;
+grid-area: b;
+margin-bottom: 20px;}
+
+.morevideo{display: flex;
+    text-decoration: none;
+margin-bottom: 10px;}
+
+.morevideo-img{position: relative;}
+.morevideo-img>img{height: 96px;}
+.morevideo-icon{position: absolute;
+top: 0;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: flex-end;}
+.morevideo-icon>button{background: black;
+width: 26px;
+height: 26px;
+border-radius: 2px;
+border: none;
+margin: 3px 3px 0 0;
+display: flex;
+visibility: hidden;
+}
+.morevideo:hover .morevideo-icon>button{visibility: visible;
+}
+.morevideo-icon>button>img{width: 22px;height: 22px;
+margin: auto;}
+
+.morevideo-time{
+text-align: right;
+margin-top: -25px;
+margin-right: 3px;
+}
+.morevideo-time>span{font-size: 12px;
+font-weight: 500;
+padding: 1px 4px;
+background: black;
+border-radius: 2px;
+color: white;
+}
+
+.morevideo-info{flex: 1;
+display: flex;
+flex-direction: column;
+margin-left: 5px;}
+.morevideo-info>h5{font-size: 14px;
+color: white;
+margin-bottom: 4px;
+padding-top: 4px;
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:2;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.morevideo-info>div{display: flex;
+align-items: center;}
+.morevideo-info>div>span{font-size: 12px;
+color: #aaaaaa;
+line-height: 18px;
+margin-right: 5px;}
+.morevideo-info>div>img{width: 14px;
+height: 14px;}
+.morevideo-info>span{font-size: 12px;
+    color: #aaaaaa;}
+
+.morevideo-option{display: flex;}
+.morevideo-option>img{width: 24px;
+height: 24px;
+visibility: hidden;}
+
+.morevideo:hover .morevideo-option>img{visibility: visible;
+}
+
+/* 小於630px時之狀況 */
+@media screen and (max-width:630px) {
+.header-middle>input{display: none;}
+.search-btn{display: none;}
+.vd1{display: none;}
+.aboutv2{display: flex;
+    flex-direction: column;}
+.aboutgame2{margin-top: 16px;}
+
+}
+
